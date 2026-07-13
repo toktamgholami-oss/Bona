@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بُنا | استوديو تصميم مواقع احترافية حسب الطلب</title>
+<meta name="description" content="بُنا — تصميم وتطوير مواقع حسب الطلب دون قوالب مكررة، مبنية على هوية عملك الحقيقية. من التصميم إلى التنفيذ الكامل، مع مساعد ذكي ورسوم متحركة احترافية.">
+<meta name="theme-color" content="#0F1229">
+<meta property="og:title" content="بُنا | استوديو تصميم مواقع احترافية حسب الطلب">
+<meta property="og:description" content="تصميم مواقع حسب الطلب دون قوالب مكررة — كل مشروع يُبنى من الصفر وفق هوية عملك.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bona-pearl.vercel.app/ar.html">
+<meta property="og:image" content="https://bona-pearl.vercel.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="بُنا | استوديو تصميم مواقع احترافية حسب الطلب">
+<meta name="twitter:description" content="تصميم مواقع حسب الطلب دون قوالب مكررة — كل مشروع من الصفر.">
+<meta name="twitter:image" content="https://bona-pearl.vercel.app/og-image.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1229'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23E8B563' text-anchor='middle'%3Eب%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;700;900&family=Lalezar&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0F1229;
+    --bg-soft: #171b3d;
+    --cream: #F5F3EE;
+    --gold: #E8B563;
+    --gold-glow: rgba(232,181,99,0.45);
+    --teal: #3A7D7B;
+    --muted: #8B8D98;
+    --line: rgba(245,243,238,0.12);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Noto Sans Arabic', sans-serif;
+    line-height:1.85;
+    overflow-x:hidden;
+  }
+  .en{font-family:'Space Grotesk', sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  @media(hover:hover) and (pointer:fine){
+    body{cursor:none;}
+    .custom-cursor{
+      position:fixed;top:0;left:0;width:26px;height:26px;
+      border:1.5px solid var(--gold);border-radius:50%;
+      pointer-events:none;z-index:9999;
+      transform:translate(-50%,-50%);
+      transition:width .25s ease, height .25s ease, background .25s ease, border-color .25s ease;
+      mix-blend-mode:difference;
+    }
+    .custom-cursor.grow{width:52px;height:52px;background:var(--gold-glow);border-color:transparent;}
+    .custom-cursor-dot{position:fixed;top:0;left:0;width:4px;height:4px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
+  }
+
+  nav{position:sticky;top:0;z-index:50;background:rgba(15,18,41,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;height:72px;}
+  .logo{display:flex;flex-direction:column;line-height:1;gap:3px;}
+  .logo-main{display:flex;align-items:baseline;gap:7px;}
+  .logo-main .fa-name{font-family:'Lalezar', sans-serif;font-weight:400;font-size:1.6rem;}
+  .logo-main .fa-name span{color:var(--gold);}
+  .logo-main .en-name{font-family:'Space Grotesk', sans-serif;font-size:0.52rem;font-weight:500;letter-spacing:0.14em;color:var(--muted);text-transform:uppercase;}
+  .logo-tagline{font-size:0.62rem;font-weight:500;color:var(--teal);white-space:nowrap;}
+  @media(max-width:480px){ .logo-tagline{display:none;} }
+  nav .links{display:flex;gap:32px;font-size:0.95rem;color:var(--muted);align-items:center;}
+  nav .links a:hover{color:var(--cream);}
+  nav .links a#navAboutLink{position:relative;}
+  nav .links a#navAboutLink::after{
+    content:'';position:absolute;top:-2px;left:-10px;width:6px;height:6px;border-radius:50%;
+    background:var(--gold);box-shadow:0 0 6px var(--gold-glow);animation:pulseDot 2.2s ease-in-out infinite;
+  }
+  @keyframes pulseDot{0%,100%{opacity:0.5;transform:scale(0.85);}50%{opacity:1;transform:scale(1.15);}}
+  .nav-toggle{display:none;background:none;border:none;color:var(--cream);width:38px;height:38px;cursor:pointer;padding:0;flex-direction:column;justify-content:center;align-items:center;gap:5px;order:2;}
+  .nav-toggle span{display:block;width:22px;height:2px;background:var(--cream);transition:transform .25s ease, opacity .25s ease;}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  nav .links a#navAboutLink.seen::after{display:none;}
+
+  @media(max-width:768px){
+    nav .wrap{flex-wrap:wrap;}
+    .logo{order:1;}
+    .nav-toggle{display:flex;}
+    nav .links{order:3;flex-basis:100%;flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:max-height .3s ease;border-top:1px solid transparent;align-items:stretch;}
+    nav .links a{padding:14px 0;border-top:1px solid var(--line);}
+    nav .cta-btn{order:4;flex-basis:100%;text-align:center;max-height:0;overflow:hidden;padding:0;margin:0;transition:max-height .3s ease, padding .3s ease, margin .3s ease;box-shadow:none;}
+    nav.mobile-open .links{max-height:300px;}
+    nav.mobile-open .cta-btn{max-height:60px;padding:12px 22px;margin:14px 0;}
+  }
+  .cta-btn{background:var(--gold);color:var(--bg);padding:10px 22px;border-radius:8px;font-weight:700;font-size:0.9rem;transition:transform .2s ease, box-shadow .2s ease;display:inline-block;box-shadow:0 0 20px var(--gold-glow);}
+  .cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px var(--gold-glow);}
+  .cta-btn:active{transform:scale(0.96);box-shadow:0 4px 14px var(--gold-glow);}
+
+  header.hero{padding:110px 0 90px;position:relative;}
+  .eyebrow{color:var(--teal);font-size:0.85rem;font-weight:700;letter-spacing:0.02em;margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+  .eyebrow::before{content:'';width:28px;height:2px;background:var(--teal);}
+  h1{font-family:'Lalezar', sans-serif;font-weight:400;font-size:clamp(2rem, 4vw, 3rem);line-height:1.5;margin-bottom:24px;max-width:700px;text-align:center;margin-left:auto;margin-right:auto;}
+  h1 .accent{color:var(--gold);text-shadow:0 0 24px var(--gold-glow);}
+  .lede{font-size:1.15rem;color:var(--muted);max-width:560px;margin-bottom:36px;}
+  .hero-actions{display:flex;gap:16px;margin-bottom:70px;flex-wrap:wrap;}
+  .btn-outline{border:1px solid var(--line);padding:10px 22px;border-radius:8px;font-size:0.9rem;font-weight:500;}
+  .btn-outline:hover{border-color:var(--cream);}
+  .btn-outline:active{transform:scale(0.96);border-color:var(--gold);}
+
+  .demo{background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;padding:32px;display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;}
+  @media(max-width:720px){.demo{grid-template-columns:1fr;}}
+  .demo-col{min-width:0;}
+  .demo-label{font-size:0.75rem;color:var(--muted);letter-spacing:0.05em;margin-bottom:12px;}
+  .idea-box{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:18px;font-family:'Space Grotesk',monospace;font-size:0.85rem;color:var(--teal);min-height:120px;}
+  .idea-box .cursor{display:inline-block;width:8px;height:1em;background:var(--teal);vertical-align:middle;animation:blink 1s step-end infinite;}
+  @keyframes blink{50%{opacity:0;}}
+  .arrow{font-size:1.6rem;color:var(--gold);}
+  .site-preview{background:var(--bg);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .site-preview .bar{height:26px;background:var(--bg-soft);display:flex;align-items:center;gap:6px;padding:0 10px;}
+  .site-preview .dot{width:7px;height:7px;border-radius:50%;background:var(--muted);opacity:0.4;}
+  .site-preview .body{padding:18px;}
+  .site-preview .sp-title{height:12px;width:70%;background:var(--gold);border-radius:4px;margin-bottom:10px;opacity:0;box-shadow:0 0 12px var(--gold-glow);animation:reveal .6s ease forwards 1.2s;}
+  .site-preview .sp-line{height:8px;background:var(--line);border-radius:4px;margin-bottom:8px;opacity:0;animation:reveal .6s ease forwards;}
+  .site-preview .sp-line:nth-child(2){width:90%;animation-delay:1.5s;}
+  .site-preview .sp-line:nth-child(3){width:60%;animation-delay:1.7s;}
+  .site-preview .sp-btn{margin-top:14px;width:80px;height:24px;background:var(--teal);border-radius:6px;opacity:0;animation:reveal .6s ease forwards 1.9s;}
+  @keyframes reveal{to{opacity:1;}}
+
+  section{padding:90px 0;border-top:1px solid var(--line);}
+  #about{display:none;}
+  #about.revealed{display:block;}
+  .section-head{margin-bottom:56px;max-width:600px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;}
+  .section-head p{color:var(--muted);margin-top:14px;}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:820px){.grid3{grid-template-columns:1fr;}}
+  .card{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:28px;transition:transform .25s ease, border-color .25s ease;}
+  .card:hover{transform:translateY(-4px);border-color:var(--gold);}
+  .card:active{transform:translateY(-1px) scale(0.98);border-color:var(--gold);}
+  .card .num{font-family:'Space Grotesk';color:var(--gold);font-weight:700;font-size:0.9rem;margin-bottom:16px;}
+  .card.card-teal:hover{border-color:var(--teal);box-shadow:0 8px 24px rgba(58,125,123,0.18);}
+  .card.card-teal .num{color:var(--teal);}
+  .card h3{font-size:1.1rem;margin-bottom:10px;}
+  .card p{color:var(--muted);font-size:0.92rem;}
+
+  .journal-wrap{perspective:1800px;}
+  .journal{position:relative;transition:transform .12s ease-out;transform-style:preserve-3d;}
+  .journal-spread{position:relative;display:grid;grid-template-columns:1fr 1fr;background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;overflow:hidden;min-height:340px;box-shadow:0 30px 70px rgba(0,0,0,0.4);transform-origin:center;}
+  .journal-spread::before{content:'';position:absolute;top:0;bottom:0;left:50%;width:44px;margin-left:-22px;background:linear-gradient(90deg, rgba(0,0,0,0.28), transparent 45%, transparent 55%, rgba(0,0,0,0.28));pointer-events:none;z-index:2;}
+  @keyframes pageFlip{0%{transform:rotateY(0deg);}45%{transform:rotateY(-10deg) scale(0.985);}100%{transform:rotateY(0deg);}}
+  .journal-spread.flip{animation:pageFlip .55s ease;}
+  .journal-page{padding:44px 40px;display:flex;flex-direction:column;justify-content:center;}
+  .journal-page.j-left .j-num{font-family:'Space Grotesk';color:var(--gold);font-weight:700;font-size:0.85rem;margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .j-badge{font-family:'Noto Sans Arabic';font-weight:500;font-size:0.65rem;color:var(--muted);border:1px solid var(--line);padding:3px 10px;border-radius:20px;}
+  .journal-page.j-left h3{font-family:'Lalezar';font-weight:400;font-size:1.5rem;margin-bottom:14px;color:var(--cream);}
+  .journal-page.j-left p{color:var(--muted);font-size:0.92rem;line-height:1.9;}
+  .journal-page.j-right{background:linear-gradient(135deg,var(--teal),var(--bg));align-items:flex-start;text-align:right;color:rgba(245,243,238,0.82);font-size:0.88rem;line-height:1.95;position:relative;}
+  .journal-page.j-right::before{content:'النتيجة';position:absolute;top:20px;right:24px;font-family:'Noto Sans Arabic';font-weight:700;font-size:0.65rem;letter-spacing:0;color:rgba(245,243,238,0.4);}
+  .journal-page.j-right p{margin-top:26px;}
+  .journal-page.j-right::after{content:'';position:absolute;inset:14px;border:1px dashed rgba(245,243,238,0.18);border-radius:8px;pointer-events:none;}
+  @media(max-width:720px){
+    .journal-spread{grid-template-columns:1fr;min-height:0;}
+    .journal-spread::before{display:none;}
+    .journal-page.j-right{order:-1;min-height:180px;}
+    .journal-page{padding:28px 24px;}
+  }
+  .journal-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:24px;}
+  .journal-btn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--bg-soft);color:var(--cream);font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s ease,color .2s ease;}
+  .journal-btn:hover{border-color:var(--gold);color:var(--gold);}
+  .journal-btn:active{transform:scale(0.9);}
+  .journal-dots{display:flex;gap:8px;}
+  .journal-dot{width:7px;height:7px;border-radius:50%;background:var(--line);cursor:pointer;transition:background .2s ease,transform .2s ease;}
+  .journal-dot.active{background:var(--gold);transform:scale(1.3);}
+
+  .process{position:relative;}
+  .process::before{content:'';position:absolute;top:0;bottom:0;right:19px;width:2px;background:linear-gradient(var(--line), var(--line));}
+  @media(max-width:640px){.process::before{right:15px;}}
+  .process-step{position:relative;padding-right:56px;padding-bottom:44px;}
+  .process-step:last-child{padding-bottom:0;}
+  .process-step .p-dot{position:absolute;right:8px;top:2px;width:24px;height:24px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk';font-weight:700;font-size:0.75rem;color:var(--gold);z-index:1;}
+  @media(max-width:640px){.process-step{padding-right:44px;}.process-step .p-dot{right:4px;width:20px;height:20px;font-size:0.68rem;}}
+  .process-step h3{font-size:1.05rem;margin-bottom:6px;}
+  .process-step p{color:var(--muted);font-size:0.9rem;}
+
+  .about-text{max-width:680px;}
+  .about-text p{font-size:1.05rem;color:var(--cream);margin-bottom:22px;}
+  .about-tagline{font-family:'Lalezar', sans-serif;font-weight:400;font-size:1.8rem;color:var(--gold);text-shadow:0 0 20px var(--gold-glow);margin-top:32px;}
+
+  .contact-box{background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;padding:48px;text-align:center;}
+  .contact-box h2{margin-bottom:16px;}
+  .contact-box p{color:var(--muted);margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto;}
+
+  .contact-form{display:flex;flex-direction:column;gap:14px;max-width:420px;margin:0 auto;text-align:right;}
+  .contact-form input, .contact-form textarea{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:13px 16px;color:var(--cream);font-family:'Noto Sans Arabic',sans-serif;font-size:1rem;font-weight:500;line-height:1.8;resize:none;transition:border-color .2s ease;}
+  .contact-form input::placeholder, .contact-form textarea::placeholder{color:var(--muted);font-weight:400;}
+  .contact-form input:focus, .contact-form textarea:focus{outline:none;border-color:var(--gold);}
+  @media(max-width:768px){.contact-form input, .contact-form textarea{font-size:16px;}}
+  .contact-form button{border:none;cursor:pointer;margin-top:6px;font-family:'Noto Sans Arabic',sans-serif;}
+  .contact-success{display:none;color:var(--teal);font-weight:700;margin-top:8px;}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
+  .fade-in-up{opacity:0;animation:fadeUp .8s ease forwards;}
+  .delay-1{animation-delay:.05s;} .delay-2{animation-delay:.18s;} .delay-3{animation-delay:.32s;} .delay-4{animation-delay:.46s;} .delay-5{animation-delay:.6s;}
+
+  header.hero{overflow:hidden;}
+  .glow-parallax{position:absolute;inset:0;will-change:transform;transition:transform .05s linear;}
+  .glow-blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:0.25;pointer-events:none;z-index:0;}
+  .glow-blob.g1{width:340px;height:340px;background:var(--gold);top:-100px;left:-80px;animation:floatBlob 12s ease-in-out infinite;}
+  .glow-blob.g2{width:280px;height:280px;background:var(--teal);bottom:-80px;right:-60px;animation:floatBlob 15s ease-in-out infinite reverse;}
+  @keyframes floatBlob{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(30px,-20px) scale(1.1);}}
+  header.hero .wrap{position:relative;z-index:1;}
+
+  .reveal{opacity:0;transform:translateY(28px) scale(0.96);transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);}
+  .reveal.in-view{opacity:1;transform:translateY(0) scale(1);}
+
+  footer{padding:32px 0;text-align:center;color:var(--muted);font-size:0.85rem;border-top:1px solid var(--line);}
+
+  @media(prefers-reduced-motion: reduce){*{animation:none !important;transition:none !important;}.fade-in-up, .reveal{opacity:1 !important;transform:none !important;}}
+
+  .chat-fab{position:fixed;bottom:24px;left:24px;z-index:100;width:56px;height:56px;border-radius:50%;background:var(--gold);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px var(--gold-glow);transition:transform .2s ease;}
+  .chat-fab:hover{transform:scale(1.08);}
+  .chat-fab svg{width:24px;height:24px;}
+
+  .chat-panel{position:fixed;bottom:92px;left:24px;z-index:100;width:330px;max-width:calc(100vw - 48px);height:430px;max-height:70vh;background:var(--bg-soft);border:1px solid var(--line);border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.45);opacity:0;transform:translateY(14px) scale(0.97);pointer-events:none;transition:opacity .22s ease, transform .22s ease;}
+  .chat-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;}
+
+  .chat-head{background:var(--bg);padding:14px 16px;display:flex;align-items:center;gap:10px;border-bottom:1px solid var(--line);}
+  .chat-head .avatar{width:32px;height:32px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:'Lalezar';color:var(--bg);font-size:1rem;flex-shrink:0;}
+  .chat-head .info h4{font-size:0.88rem;}
+  .chat-head .info .status{font-size:0.72rem;color:var(--teal);display:flex;align-items:center;gap:5px;margin-top:2px;}
+  .chat-head .info .status::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);}
+  .chat-close{margin-right:auto;background:none;border:none;color:var(--muted);cursor:pointer;font-size:1.3rem;line-height:1;padding:4px;}
+  .chat-close:hover{color:var(--cream);}
+
+  .chat-body{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:9px;}
+  .chat-body::-webkit-scrollbar{width:4px;}
+  .chat-body::-webkit-scrollbar-thumb{background:var(--line);border-radius:10px;}
+
+  .chat-msg{max-width:82%;padding:9px 13px;border-radius:12px;font-size:0.82rem;line-height:1.75;animation:fadeUp .3s ease forwards;}
+  .chat-msg.bot{background:var(--bg);border:1px solid var(--line);align-self:flex-start;border-bottom-left-radius:3px;}
+  .chat-msg.user{background:var(--gold);color:var(--bg);align-self:flex-end;border-bottom-right-radius:3px;font-weight:500;}
+
+  .chat-quick{display:flex;flex-direction:column;gap:7px;padding:0 14px 14px;flex-shrink:0;}
+  .chat-quick button{background:var(--bg);border:1px solid var(--line);color:var(--cream);padding:8px 12px;border-radius:8px;font-size:0.8rem;text-align:right;cursor:pointer;font-family:'Noto Sans Arabic';transition:border-color .2s ease,color .2s ease;}
+  .chat-quick button:hover{border-color:var(--teal);color:var(--teal);}
+
+  @media(max-width:480px){.chat-fab{left:16px;bottom:16px;}.chat-panel{left:16px;bottom:82px;}}
+
+  @media(max-width:600px){
+    header.hero{padding:80px 0 56px;}
+    section{padding:56px 0;}
+    .section-head{margin-bottom:36px;}
+    .demo{padding:20px;gap:16px;}
+    .arrow{transform:rotate(90deg);}
+    .contact-box{padding:32px 22px;}
+    .hero-actions{gap:12px;}
+    .hero-actions a{flex:1 1 auto;text-align:center;}
+    .card{padding:22px;}
+  }
+
+  .lang-switch{display:flex;gap:4px;font-size:0.78rem;color:var(--muted);}
+  .lang-switch a{padding:3px 7px;border-radius:5px;font-family:'Space Grotesk';}
+  .lang-switch a.active{color:var(--gold);font-weight:700;}
+  .lang-switch a:hover{color:var(--cream);}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<div class="custom-cursor" id="customCursor"></div>
+<div class="custom-cursor-dot" id="customCursorDot"></div>
+
+<nav id="mainNav">
+  <div class="wrap">
+    <div class="logo">
+      <div class="logo-main">
+        <span class="fa-name" style="color:var(--cream)">بُنا<span style="text-shadow:0 0 14px var(--gold-glow)">.</span></span>
+        <span class="en-name">Bona</span>
+      </div>
+      <span class="logo-tagline">نبني المعنى</span>
+    </div>
+    <div class="links" id="navLinks">
+      <a href="#about" id="navAboutLink" onclick="showAbout(event)">من نحن</a>
+      <a href="#services">الخدمات</a>
+      <a href="#process">آلية العمل</a>
+      <a href="#work">الأعمال</a>
+      <a href="#contact">تواصل</a>
+      <span class="lang-switch"><a href="index.html">FA</a><a href="en.html">EN</a><a class="active" href="ar.html">AR</a></span>
+    </div>
+    <a href="#contact" class="cta-btn">ابدأ مشروعك</a>
+    <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="glow-parallax" id="glowParallax">
+    <div class="glow-blob g1"></div>
+    <div class="glow-blob g2"></div>
+  </div>
+  <div class="wrap">
+    <div class="eyebrow fade-in-up delay-1">استوديو مواقع متخصص</div>
+    <h1 class="fade-in-up delay-2">من الصفر، أبني لك <span class="accent">موقعًا احترافيًا</span></h1>
+    <p class="lede fade-in-up delay-3">تصميم وتطوير مواقع حسب الطلب دون قوالب مكررة — كل مشروع يُبنى من الصفر وفق هوية عملك.</p>
+    <div class="hero-actions fade-in-up delay-4">
+      <a href="#contact" class="cta-btn">اطلب التعاون</a>
+      <a href="#work" class="btn-outline">شاهد الأعمال</a>
+    </div>
+
+    <div class="demo fade-in-up delay-5">
+      <div class="demo-col">
+        <div class="demo-label">فكرتك</div>
+        <div class="idea-box">
+          أريد موقع أعمال احترافي<br>ومختلف عن البقية...<span class="cursor"></span>
+        </div>
+      </div>
+      <div class="arrow en">→</div>
+      <div class="demo-col">
+        <div class="demo-label">النتيجة النهائية</div>
+        <div class="site-preview">
+          <div class="bar"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+          <div class="body">
+            <div class="sp-title"></div>
+            <div class="sp-line"></div>
+            <div class="sp-line"></div>
+            <div class="sp-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">من نحن</div>
+      <h2>لماذا أقوم بهذا العمل</h2>
+    </div>
+    <div class="about-text reveal">
+      <p>بدأ طريقي بسؤال، لا بكتابة الكود: لماذا تنجح بعض الأشياء بينما يفشل غيرها؟</p>
+      <p>درست هندسة إدارة المشاريع لأنني تعلمت أن أي شيء — من مبنى إلى علامة تجارية — ينهار دون بنية صحيحة. وواصلت دراسة علم نفس الشخصية لأنني أردت أن أفهم كيف يتفاعل الناس فعلًا، لا كيف نظن أنهم يريدون.</p>
+      <p>في هذا المسار، كتبت ونشرت كتابًا من الشعر والنصوص ذات النظرة الفلسفية الوجودية. ليس للعرض — بل لأنني تعلمت أن أي فكرة لا تُتابَع حتى النهاية لا تصبح حقيقية أبدًا.</p>
+      <p>أجمع هذه العناصر الثلاثة معًا: البنية الهندسية، فهم الناس، والحس الجمالي. والنتيجة عمل جميل وفريد من نوعه.</p>
+      <div class="about-tagline">نبني المعنى.</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">الخدمات</div>
+      <h2>ماذا يمكنني أن أقدم لك</h2>
+      <p>من التصميم الأولي إلى التنفيذ الكامل — كل شيء في مكان واحد.</p>
+    </div>
+    <div class="grid3">
+      <div class="card reveal">
+        <div class="num">01</div>
+        <h3>تصميم حسب الطلب</h3>
+        <p>كل موقع يحصل على لوحة ألوان وخطوط وتخطيط خاص بتلك العلامة التجارية وحدها، لا قالبًا جاهزًا.</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">02</div>
+        <h3>الرسوم المتحركة والتفاعل</h3>
+        <p>تأثيرات التمرير، والانتقالات السلسة، والتفاصيل التي تجعل الموقع ينبض بالحياة.</p>
+      </div>
+      <div class="card card-teal reveal">
+        <div class="num">03</div>
+        <h3>مساعد ذكي</h3>
+        <p>إضافة روبوت محادثة ذكي إلى موقعك للرد السريع على استفسارات الزوار.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">آلية العمل</div>
+      <h2>من الفكرة إلى التسليم، خطوة بخطوة</h2>
+      <p>شفافة وبلا مفاجآت — تعرف دائمًا أين أنت بالضبط في كل مرحلة.</p>
+    </div>
+    <div class="process">
+      <div class="process-step reveal">
+        <div class="p-dot">1</div>
+        <h3>محادثة أولية</h3>
+        <p>نتحدث عن عملك وجمهورك وأهدافك من الموقع لنجد المسار الصحيح.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="p-dot">2</div>
+        <h3>تصميم حسب الطلب</h3>
+        <p>أبني لوحة ألوان وخطوطًا وتخطيطًا خاصًا بهويتك، لا قالبًا جاهزًا.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="p-dot">3</div>
+        <h3>جولة ملاحظات</h3>
+        <p>تشاهد النسخة الأولى، وتشاركني رأيك، ونُعدّلها معًا حتى ترضى تمامًا.</p>
+      </div>
+      <div class="process-step reveal">
+        <div class="p-dot">4</div>
+        <h3>التسليم النهائي</h3>
+        <p>موقع جاهز، مُختبر على الجوال وسطح المكتب، وجاهز للنشر.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="eyebrow">الأعمال</div>
+      <h2>مشاريع قمت ببنائها</h2>
+      <p>مثل مجلة — حرّك الفأرة وتصفّح.</p>
+    </div>
+    <div class="journal-wrap reveal">
+      <div class="journal" id="journal">
+        <div class="journal-spread" id="journalSpread"></div>
+      </div>
+      <div class="journal-nav">
+        <button class="journal-btn" id="journalPrev" aria-label="المشروع السابق">›</button>
+        <div class="journal-dots" id="journalDots"></div>
+        <button class="journal-btn" id="journalNext" aria-label="المشروع التالي">‹</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-box">
+      <h2>لنصنع موقعًا مختلفًا</h2>
+      <p>إذا كانت لديك فكرة لموقعك، شاركها معي الآن.</p>
+      <form id="contact-form" class="contact-form" onsubmit="return handleContactSubmit(event)">
+        <input type="text" name="name" placeholder="اكتب اسمك" required>
+        <input type="email" name="email" placeholder="اكتب بريدك الإلكتروني" required>
+        <textarea name="message" rows="4" placeholder="ما الذي يدور في ذهنك؟ اكتب باختصار" required></textarea>
+        <button type="submit" class="cta-btn">إرسال الرسالة</button>
+      </form>
+      <p id="contact-success" class="contact-success">تم استلام رسالتك! سأتواصل معك قريبًا.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+const supabaseClient = supabase.createClient(
+  'https://lyuhjpqykovoizirytmn.supabase.co',
+  'sb_publishable_T6NwO89RJZCKoittS4MOdg_I7wFoL_G'
+);
+
+async function handleContactSubmit(e){
+  e.preventDefault();
+  const form = document.getElementById('contact-form');
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.textContent;
+  btn.textContent = 'جاري الإرسال...';
+  btn.disabled = true;
+
+  const { error } = await supabaseClient.from('contact_messages').insert({
+    name: form.name.value,
+    email: form.email.value,
+    message: '[AR] ' + form.message.value
+  });
+
+  if(error){
+    btn.textContent = originalText;
+    btn.disabled = false;
+    alert('حدث خطأ ما، الرجاء المحاولة مرة أخرى.');
+    console.error(error);
+    return false;
+  }
+
+  form.style.display = 'none';
+  document.getElementById('contact-success').style.display = 'block';
+  return false;
+}
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.style.transitionDelay = (i % 3) * 0.12 + 's';
+  revealObserver.observe(el);
+});
+
+const journalProjects = [
+  {
+    num:'01', title:'كافيه بارجار', industry:'مقهى ومطعم',
+    desc:'التحدي: مقهى محلي بقائمة طعام ورقية قديمة وحضور إلكتروني متفرق عبر عدة صفحات تواصل اجتماعي. الحل: موقع دافئ وبسيط بقائمة طعام رقمية قابلة للتصفح، وقصة المقهى، وحجز طاولات عبر الإنترنت — تجربة تنقل الزائر من شاشة هاتفه إلى مقعد المقهى.',
+    result:'انتقل حجز الطاولات من مكالمات هاتفية متفرقة ورسائل إنستغرام إلى نموذج إلكتروني واحد بتأكيد فوري — أبسط للعميل، وقابل للمتابعة للمقهى.'
+  },
+  {
+    num:'02', title:'لوپ', industry:'شركة تقنية ناشئة',
+    desc:'التحدي: أداة لإدارة المشاريع بميزات تقنية معقدة يجب أن تكون مفهومة لجمهور غير تقني أيضًا. الحل: صفحة هبوط تعتمد على السرد، تعرض مشكلة الجمهور أولًا ثم تقدّم المنتج — بعرض توضيحي تفاعلي بسيط بدلًا من شرح تقني جاف.',
+    result:'يفهم الزائر غير التقني القيمة الأساسية للمنتج من خلال عرض توضيحي من ثلاث خطوات فقط، دون الحاجة لقراءة أي وثائق أو مصطلحات متخصصة.'
+  },
+  {
+    num:'03', title:'حرير', industry:'علامة أزياء وملابس',
+    desc:'التحدي: ملابس مصنوعة يدويًا تكمن قيمتها في الملمس والتفاصيل، لا في صور المنتج المسطحة فقط. الحل: معرض بإمكانية التكبير على التفاصيل وقصة قصيرة خلف كل قطعة — لإعادة خلق إحساس البوتيك الحقيقي في الفضاء الرقمي.',
+    result:'بدلًا من التمرير السريع بين الصور، يتوقف الزائر عند كل قطعة — نفس الاهتمام الذي يُولى لملمس القماش في بوتيك حقيقي.'
+  },
+  {
+    num:'04', title:'دستان مهربان', industry:'جمعية خيرية',
+    desc:'التحدي: كسب ثقة المتبرعين دون علامة تجارية كبيرة أو سجل إعلامي معروف. الحل: تصميم شفاف يوضح بالضبط إلى أين تذهب التبرعات وكيف تُصرف، مع نموذج تبرع بسيط وآمن — شفافية تبني الثقة بنفسها.',
+    result:'يعرف المتبرع بالضبط أين ستذهب أمواله قبل حتى ملء النموذج — مما يزيل التردد الذي عادةً ما يدفع الناس للتراجع عن التبرع.'
+  }
+];
+let journalIndex = 0;
+
+function renderJournal(){
+  const p = journalProjects[journalIndex];
+  const spread = document.getElementById('journalSpread');
+  spread.innerHTML = `
+    <div class="journal-page j-left">
+      <div class="j-num">مشروع ${p.num} <span class="j-badge">مفهومي · ${p.industry}</span></div>
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+    </div>
+    <div class="journal-page j-right"><p>${p.result}</p></div>
+  `;
+  const dots = document.getElementById('journalDots');
+  dots.innerHTML = '';
+  journalProjects.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'journal-dot' + (i === journalIndex ? ' active' : '');
+    dot.onclick = () => goToJournal(i);
+    dots.appendChild(dot);
+  });
+}
+
+function goToJournal(i){
+  if(i === journalIndex) return;
+  const spread = document.getElementById('journalSpread');
+  spread.classList.add('flip');
+  setTimeout(() => {
+    journalIndex = i;
+    renderJournal();
+  }, 250);
+  setTimeout(() => spread.classList.remove('flip'), 550);
+}
+
+document.getElementById('journalPrev').addEventListener('click', () => {
+  goToJournal((journalIndex - 1 + journalProjects.length) % journalProjects.length);
+});
+document.getElementById('journalNext').addEventListener('click', () => {
+  goToJournal((journalIndex + 1) % journalProjects.length);
+});
+
+renderJournal();
+
+const journalEl = document.getElementById('journal');
+journalEl.addEventListener('mousemove', (e) => {
+  const rect = journalEl.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / rect.width - 0.5;
+  const y = (e.clientY - rect.top) / rect.height - 0.5;
+  journalEl.style.transform = `rotateX(${y * -6}deg) rotateY(${x * 8}deg)`;
+});
+journalEl.addEventListener('mouseleave', () => {
+  journalEl.style.transform = 'rotateX(0deg) rotateY(0deg)';
+});
+
+if (window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+  const cursor = document.getElementById('customCursor');
+  const cursorDot = document.getElementById('customCursorDot');
+  let mx = 0, my = 0, cx = 0, cy = 0;
+
+  window.addEventListener('mousemove', (e) => {
+    mx = e.clientX; my = e.clientY;
+    cursorDot.style.transform = `translate(${mx}px, ${my}px) translate(-50%,-50%)`;
+  });
+
+  function animateCursor(){
+    cx += (mx - cx) * 0.18;
+    cy += (my - cy) * 0.18;
+    cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%,-50%)`;
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  document.querySelectorAll('a, button, .card, .journal-dot').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
+  });
+}
+
+const glowParallax = document.getElementById('glowParallax');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < window.innerHeight) {
+    glowParallax.style.transform = `translateY(${y * 0.25}px)`;
+  }
+}, { passive: true });
+
+const chatTree = {
+  root: {
+    bot: "مرحبًا! أنا مساعد بُنا 👋 كيف يمكنني مساعدتك؟",
+    options: [
+      {label:"ما الخدمات التي تقدمونها؟", next:"services"},
+      {label:"كم التكلفة ومدة التسليم؟", next:"pricing"},
+      {label:"كيف أبدأ مشروعي؟", next:"start"},
+      {label:"هل لديكم أعمال سابقة؟", next:"work"}
+    ]
+  },
+  services: {
+    bot: "تصميم مواقع حسب الطلب (دون قوالب جاهزة)، رسوم متحركة وتفاعل احترافي، وإضافة مساعد ذكي — تمامًا مثل الذي تتحدث معه الآن 😉",
+    options: [
+      {label:"العودة للأسئلة", next:"root"},
+      {label:"ابدأ مشروعًا", action:"contact"}
+    ]
+  },
+  pricing: {
+    bot: "تختلف التكلفة والمدة حسب تعقيد المشروع. أفضل طريقة هي أن تكتب لي فكرتك باختصار لأعطيك تقديرًا دقيقًا وفق احتياجك.",
+    options: [
+      {label:"العودة للأسئلة", next:"root"},
+      {label:"إرسال طلب", action:"contact"}
+    ]
+  },
+  start: {
+    bot: "يكفي أن تملأ النموذج أسفل الصفحة أو تكتب ما يدور في ذهنك — سأتواصل معك خلال أقل من يوم.",
+    options: [
+      {label:"العودة للأسئلة", next:"root"},
+      {label:"الذهاب لنموذج التواصل", action:"contact"}
+    ]
+  },
+  work: {
+    bot: "يمكنك رؤية قسم «الأعمال» أعلى الصفحة مباشرة. سيتم إضافة المزيد من المشاريع المكتملة قريبًا.",
+    options: [
+      {label:"العودة للأسئلة", next:"root"},
+      {label:"مشاهدة الأعمال", action:"work"}
+    ]
+  }
+};
+
+let chatStarted = false;
+
+function toggleChat(){
+  const panel = document.getElementById('chatPanel');
+  panel.classList.toggle('open');
+  if(panel.classList.contains('open') && !chatStarted){
+    chatStarted = true;
+    renderNode('root');
+  }
+}
+
+function renderNode(key){
+  const node = chatTree[key];
+  addMessage(node.bot, 'bot');
+  const quick = document.getElementById('chatQuick');
+  quick.innerHTML = '';
+  node.options.forEach(opt=>{
+    const btn = document.createElement('button');
+    btn.textContent = opt.label;
+    btn.onclick = ()=>handleOption(opt);
+    quick.appendChild(btn);
+  });
+}
+
+function handleOption(opt){
+  addMessage(opt.label, 'user');
+  document.getElementById('chatQuick').innerHTML = '';
+  if(opt.action === 'contact'){
+    setTimeout(()=>{
+      addMessage('ممتاز! سآخذك إلى نموذج التواصل 👇', 'bot');
+      setTimeout(()=>{
+        document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+        toggleChat();
+      }, 500);
+    }, 400);
+    return;
+  }
+  if(opt.action === 'work'){
+    setTimeout(()=>{
+      document.getElementById('work').scrollIntoView({behavior:'smooth'});
+      toggleChat();
+    }, 400);
+    return;
+  }
+  setTimeout(()=>renderNode(opt.next), 400);
+}
+
+function addMessage(text, sender){
+  const body = document.getElementById('chatBody');
+  const msg = document.createElement('div');
+  msg.className = 'chat-msg ' + sender;
+  msg.textContent = text;
+  body.appendChild(msg);
+  body.scrollTop = body.scrollHeight;
+}
+
+function showAbout(e){
+  e.preventDefault();
+  const about = document.getElementById('about');
+  about.classList.add('revealed');
+  document.getElementById('navAboutLink').classList.add('seen');
+  requestAnimationFrame(()=>{
+    about.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+}
+
+function toggleNav(){
+  document.getElementById('mainNav').classList.toggle('mobile-open');
+  document.getElementById('navToggle').classList.toggle('open');
+}
+document.querySelectorAll('#navLinks a').forEach(a=>{
+  a.addEventListener('click', ()=>{
+    document.getElementById('mainNav').classList.remove('mobile-open');
+    document.getElementById('navToggle').classList.remove('open');
+  });
+});
+</script>
+
+<footer>
+  <div style="font-family:'Lalezar';color:var(--gold);font-size:1rem;margin-bottom:10px;">نبني المعنى.</div>
+  © 2026 بُنا — جميع الحقوق محفوظة
+</footer>
+
+<button class="chat-fab" id="chatFab" onclick="toggleChat()" aria-label="فتح المساعد الذكي">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+</button>
+
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="avatar">ب</div>
+    <div class="info">
+      <h4>مساعد بُنا</h4>
+      <div class="status">متصل</div>
+    </div>
+    <button class="chat-close" onclick="toggleChat()" aria-label="إغلاق">×</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-quick" id="chatQuick"></div>
+</div>
+
+</body>
+</html>
