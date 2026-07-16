@@ -126,7 +126,8 @@
   nav .links a#navAboutLink.seen::after{display:none;}
 
   @media(max-width:768px){
-    nav .wrap{flex-wrap:wrap;}
+    nav .wrap{flex-wrap:wrap;height:auto;min-height:72px;}
+    nav.mobile-open{background:var(--bg);}
     .logo{order:1;}
     .nav-toggle{display:flex;}
     nav .links{

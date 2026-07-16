@@ -83,7 +83,8 @@
   nav .links a#navAboutLink.seen::after{display:none;}
 
   @media(max-width:768px){
-    nav .wrap{flex-wrap:wrap;}
+    nav .wrap{flex-wrap:wrap;height:auto;min-height:72px;}
+    nav.mobile-open{background:var(--bg);}
     .logo{order:1;}
     .nav-toggle{display:flex;}
     nav .links{order:3;flex-basis:100%;flex-direction:column;gap:0;max-height:0;overflow:hidden;transition:max-height .3s ease;border-top:1px solid transparent;align-items:stretch;}
