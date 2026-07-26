@@ -704,6 +704,11 @@ const journalProjects = [
     num:'04', title:'Dastan-e-Mehraban', industry:'Charity & NGO',
     desc:'Challenge: earning donor trust without a large brand or media track record. Solution: transparent design that shows exactly where donations go and how they\'re spent, with a simple, secure donation form — transparency that builds trust on its own.',
     result:'A donor knows exactly where their money goes before they even fill out the form — removing the hesitation that usually causes people to abandon giving.'
+  },
+  {
+    num:'05', title:'Barg Cafe', industry:'Cafe & Restaurant', real:true,
+    desc:'Challenge: a local cafe needed a simple, warm site to put its menu and story online. Solution: a dark brown and gold palette, an about section, a digital menu with photos and prices for each drink, and clear contact details.',
+    result:'The first fully built and shipped project — from design to implementation, a real rehearsal for taking on actual client work.'
   }
 ];
 let journalIndex = 0;
@@ -713,7 +718,7 @@ function renderJournal(){
   const spread = document.getElementById('journalSpread');
   spread.innerHTML = `
     <div class="journal-page j-left">
-      <div class="j-num">Project ${p.num} <span class="j-badge">Concept · ${p.industry}</span></div>
+      <div class="j-num">Project ${p.num} <span class="j-badge">${p.real ? 'Built' : 'Concept'} · ${p.industry}</span></div>
       <h3>${p.title}</h3>
       <p>${p.desc}</p>
     </div>
